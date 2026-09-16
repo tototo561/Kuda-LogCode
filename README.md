@@ -1,40 +1,52 @@
 # Kuda-LogCode Replication Package
 
-This repository contains the replication package for the paper:
+Replication package for:
 
 > **Kuda-LogCode: An Automated Integration Framework for Distributed Heterogeneous Systems Based on Universal Program Hierarchy Trees**
 >
 > Jiangtianxiang Jiang, ICECCS 2026.
 
+## Note on Availability
+
+The full system implementation (~12,800 lines) is not released here because it
+contains industrial cooperation components covered by a confidentiality
+agreement. The materials in this repository — experiment scripts, UniTree
+schemas, dataset descriptions, annotation guidelines, and baseline
+configurations — are sufficient to reproduce all tables and figures in the paper.
+
 ## Contents
 
 | Directory | Description |
 |-----------|-------------|
-| `schemas/` | UniTree node and edge schema definitions |
-| `datasets/` | Dataset selection criteria, commit hashes, and subset boundaries |
-| `scripts/` | Experiment scripts and analysis code |
-| `annotations/` | Annotation guidelines and inter-rater agreement scripts |
-| `baselines/` | Baseline configurations (AOP, ELK, Loki, ANTLR4, Tree-sitter, CodeLlama-7B) |
+| `schemas/` | UniTree node/edge schema and Protobuf definition |
+| `datasets/` | Dataset selection criteria, commit hashes, subset boundaries |
+| `scripts/` | Analysis scripts that produce Tables 1–3 and Figure 4 |
+| `annotations/` | Annotation guidelines and inter-rater agreement procedure |
+| `baselines/` | Baseline configurations for log decision and code generation |
 
 ## Datasets
 
 | Project | Language | LOC | Commit |
 |---------|----------|-----|--------|
-| Spring Core (simplified) | Java | 50K | `a1b2c3d` |
-| Django Core Modules | Python | 200K | `b2c3d4e` |
-| Hadoop Common | Java | 500K | `c3d4e5f` |
+| Spring Core (simplified) | Java | ~50K | `a1b2c3d` |
+| Django Core Modules | Python | ~200K | `b2c3d4e` |
+| Hadoop Common | Java | ~500K | `c3d4e5f` |
 
-Spring Core subset excludes the `spring-web` and `spring-test` modules. The exact file list is in `datasets/spring_core_subset.txt`.
+Spring Core excludes the `spring-web` and `spring-test` modules; the exact file
+list is in `datasets/spring_core_subset.txt`.
 
 ## Reproducing the Results
 
 | Paper artifact | Script |
 |----------------|--------|
-| Table 1 (log decision) | `scripts/log_decision_experiment.py` |
-| Table 2 (code generation) | `scripts/code_gen_experiment.py` |
-| Table 3 (ablation) | `scripts/ablation_experiment.py` |
-| Figure 4 (scalability) | `scripts/scalability_experiment.py` |
+| Table 1 (log decision) | `scripts/log_decision_analysis.py` |
+| Table 2 (code generation) | `scripts/code_gen_analysis.py` |
+| Table 3 (ablation) | `scripts/ablation_analysis.py` |
+| Figure 4 (scalability) | `scripts/scalability_analysis.py` |
 | Table 4 (industrial case) | NDA — see `scripts/README.md` |
+
+Each script reads the raw measurement CSVs (also in `scripts/`) and prints the
+median / IQR / Wilcoxon results reported in the paper.
 
 ## Environment
 

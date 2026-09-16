@@ -1,0 +1,6 @@
+# Spring Core subset used in the paper.
+# All paths are relative to the repository root.
+spring-core/src/main/java/org/springframework/core/
+spring-core/src/main/java/org/springframework/util/
+spring-core/src/main/java/org/springframework/lang/
+# Excluded: spring-web/, spring-test/

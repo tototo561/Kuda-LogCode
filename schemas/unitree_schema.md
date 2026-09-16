@@ -36,4 +36,4 @@ UniTree is a five-tuple T = (V, E, F, B, R).
 
 ## Serialization
 
-UniTree is serialized using Protobuf 3.20.3. The `.proto` definition is in `schemas/unitree.proto`.
+UniTree is serialized with Protobuf 3.20.3; see `unitree.proto`.

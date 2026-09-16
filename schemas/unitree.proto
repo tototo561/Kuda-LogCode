@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package unitree;
+
+message FunctionNode {
+  string id = 1;
+  string name = 2;
+  string module = 3;
+  repeated string params = 4;
+  double priority = 5;
+  double scope = 6;
+}
+
+message BlockNode {
+  string id = 1;
+  string type = 2;
+  string desc = 3;
+  string parent = 4;
+  double threshold = 5;
+}
+
+message Edge {
+  string type = 1;
+  string src = 2;
+  string dst = 3;
+  string cond = 4;
+}
+
+message UniTree {
+  repeated FunctionNode functions = 1;
+  repeated BlockNode blocks = 2;
+  repeated Edge edges = 3;
+}

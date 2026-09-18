@@ -1,0 +1,62 @@
+{
+  "project": "Kuda-LogCode",
+  "paper": "Kuda-LogCode: An Automated Integration Framework for Distributed Heterogeneous Systems Based on Universal Program Hierarchy Trees",
+  "venue": "ICECCS 2026",
+  "author": "Jiangtianxiang Jiang",
+  "datasets": [
+    {
+      "name": "Spring Core (simplified)",
+      "language": "Java",
+      "loc": "~50K",
+      "repository_url": "https://github.com/spring-projects/spring-framework",
+      "commit_hash": "5d5c1e2",
+      "included_modules": [
+        "spring-core/src/main/java"
+      ],
+      "excluded_modules": [
+        "spring-web",
+        "spring-test"
+      ],
+      "subset_file_list": "datasets/spring_core_subset.txt",
+      "notes": "Spring Core subset excludes the spring-web and spring-test modules; the exact file list is provided in datasets/spring_core_subset.txt."
+    },
+    {
+      "name": "Django Core Modules",
+      "language": "Python",
+      "loc": "~200K",
+      "repository_url": "https://github.com/django/django",
+      "commit_hash": "9a1b3c7",
+      "included_modules": [
+        "django/core",
+        "django/db",
+        "django/utils"
+      ],
+      "excluded_modules": [],
+      "subset_file_list": null,
+      "notes": "Core modules only."
+    },
+    {
+      "name": "Hadoop Common",
+      "language": "Java",
+      "loc": "~500K",
+      "repository_url": "https://github.com/apache/hadoop",
+      "commit_hash": "2f8e4d1",
+      "included_modules": [
+        "hadoop-common-project/hadoop-common/src/main/java"
+      ],
+      "excluded_modules": [],
+      "subset_file_list": null,
+      "notes": "Hadoop Common module only."
+    }
+  ],
+  "environment": {
+    "java": "Java 11",
+    "python": "Python 3.10",
+    "javaparser": "3.25.8",
+    "astroid": "2.15.8",
+    "protobuf": "3.20.3",
+    "velocity": "Apache Velocity 2.3",
+    "google_java_format": "1.17.0",
+    "black": "23.12.1"
+  }
+}

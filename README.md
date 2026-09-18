@@ -23,6 +23,7 @@ configurations — are sufficient to reproduce all tables and figures in the pap
 | `scripts/` | Analysis scripts that produce Tables 1–3 and Figure 4 |
 | `annotations/` | Annotation guidelines and inter-rater agreement procedure |
 | `baselines/` | Baseline configurations for log decision and code generation |
+| `dataset_manifest.json` | Machine-readable dataset manifest (repos, commits, modules, environment) |
 
 ## Datasets
 

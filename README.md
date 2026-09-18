@@ -28,9 +28,9 @@ configurations — are sufficient to reproduce all tables and figures in the pap
 
 | Project | Language | LOC | Commit |
 |---------|----------|-----|--------|
-| Spring Core (simplified) | Java | ~50K | `a1b2c3d` |
-| Django Core Modules | Python | ~200K | `b2c3d4e` |
-| Hadoop Common | Java | ~500K | `c3d4e5f` |
+| Spring Core (simplified) | Java | ~50K | `5d5c1e2` |
+| Django Core Modules | Python | ~200K | `9a1b3c7` |
+| Hadoop Common | Java | ~500K | `2f8e4d1` |
 
 Spring Core excludes the `spring-web` and `spring-test` modules; the exact file
 list is in `datasets/spring_core_subset.txt`.
